@@ -8,6 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    // Lazy load because we just load from the module
     path: 'favorites',
     loadChildren: () => import('./pages/favorites/favorites.module').then(m => m.FavoritesPageModule)
   },
